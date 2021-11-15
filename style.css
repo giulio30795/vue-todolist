@@ -74,7 +74,7 @@ ul li:last-child{
 }
 
 ul li.completed::before{
-    background-color: green;
+    background-color: rgb(2, 115, 228);
 }
 .text {
     flex-grow: 1;
