@@ -1,8 +1,4 @@
-// Rifare l’esercizio della todo list.
-// Partire dalla definizione di un array con 3 oggetti ( i todo).
-// Ogni oggetto todo avrà le seguenti proprietà:
-// - text, una stringa che indica il testo del todo
-// - completed, un booleano (true/false) che indica se il todo è stato completato oppure no
+
 // MILESTONE 1
 // Stampare all’interno di una lista, un item per ogni todo.
 // Se la proprietà completed è uguale a true, visualizzare il testo del todo sbarrato.
@@ -13,3 +9,26 @@
 // Bonus:
 // 1. Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista.
 // 2. Cliccando sul testo del todo, invertire il valore della proprietà completed del todo corrispondente (se completed era uguale a false, impostare true e viceversa).
+const app = new Vue ({
+    el: '#app',
+    data: {
+        todos:[
+            {
+                text: 'Fare la spesa',
+                completed: false,
+            },
+            {
+                text: 'Comprare un quadro',
+                completed: false,
+            },
+            {
+                text: 'Fare benzina',
+                completed: true,
+            },
+            {
+                text: 'Fare la spesa',
+                completed: false,
+            },
+        ],
+    }
+})
