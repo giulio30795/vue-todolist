@@ -50,5 +50,6 @@ const app = new Vue ({
         changeValue(index){
             this.todos[index].completed = !this.todos[index].completed
         },
+        
     },
 })

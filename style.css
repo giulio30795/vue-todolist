@@ -10,7 +10,8 @@
     width: 900px;
     text-align: center;
     margin: 30px auto;
-
+    position: relative;
+    z-index: 1;
 }
 
 /* Header */
@@ -102,3 +103,8 @@ li::before{
     text-decoration: line-through;
 }
 
+svg{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
