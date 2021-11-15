@@ -27,6 +27,7 @@
             </nav>
 
             <main>
+                <h1 v-show="todos.length == 0">Inserisci il tuo Primo ToDo!</h1>
                 <ul>
                     <li 
                     :class="{completed: todo.completed}"
