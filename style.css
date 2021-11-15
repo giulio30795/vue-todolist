@@ -65,7 +65,7 @@ main {
 
 ul li {
     display: flex;
-    border-bottom: 1px solid rgb(2, 115, 228);;
+    border-bottom: 1px solid rgb(2, 115, 228);
     margin: 15px 0;
 }
 
@@ -73,22 +73,32 @@ ul li:last-child{
     border-bottom: none;
 }
 
+ul li.completed::before{
+    background-color: green;
+}
 .text {
     flex-grow: 1;
     text-align: left;
     cursor: pointer;
 }
-.text::before{
+li::before{
     content: '';
     display: inline-block;
     height: 10px;
     width: 10px;
     border: 1px solid black;
     margin-right: 3px;
-
 }
 
 .delete{
     margin-left: 20px;
+}
+.delete:hover{
+    color: rgb(223, 4, 4);
+    cursor: pointer;
+}
+
+.completed span{
+    text-decoration: line-through;
 }
 

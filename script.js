@@ -26,7 +26,7 @@ const app = new Vue ({
                 completed: true,
             },
             {
-                text: 'Fare la spesa',
+                text: 'Fare i compiti',
                 completed: false,
             },
         ],
@@ -40,8 +40,15 @@ const app = new Vue ({
                 text: this.newTodo,
                 completed: false,
             })}
+            this.newTodo = ''
         },
 
-        removeTodo
+        removeTodo(index){
+            this.todos.splice(index, 1)
+        },
+
+        changeValue(index){
+            this.todos[index].completed = !this.todos[index].completed
+        },
     },
 })

@@ -18,17 +18,27 @@
             </header>
 
             <nav>
-                <input type="text" placeholder="Inserisci nuovo ToDo">
-                <button class="btn"> Aggiungi</button>
+                <input @keyup.enter ="addTodo"
+                v-model.trim="newTodo" type="text" placeholder="Inserisci nuovo ToDo">
+                <button 
+                @click="addTodo"
+                class="btn"> 
+                Aggiungi</button>
             </nav>
 
             <main>
                 <ul>
-                    <li v-for="todo in todos">
-                        <span class="text">{{todo.text}}</span>
-                        <i class="far fa-trash-alt delete"></i>
+                    <li 
+                    :class="{completed: todo.completed}"
+                    v-for="(todo, index) in todos">
+                        <span
+                        @click ="changeValue(index)"
+                        class="text">{{todo.text}}
+                        </span>
+                        <i class="far fa-trash-alt delete"
+                            @click="removeTodo (index)">
+                        </i>
                     </li>
-                    
                 </ul>
             </main>
         </div>
